@@ -1,20 +1,14 @@
-import flowbite from 'flowbite/plugin';
-
+/** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    './resources/**/*.blade.php',
-    './resources/**/*.js',
-    './resources/**/*.vue',
-    './node_modules/flowbite/**/*.js',
+    "./index.html",
+    "./resources/**/*.{js,ts,jsx,tsx,vue,blade.php}",
+    "./node_modules/flowbite/**/*.js"
   ],
   theme: {
-    extend: {
-      fontFamily: {
-        sans: ['Instrument Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-      },
-    },
+    extend: {},
   },
   plugins: [
-    flowbite,
+    require('flowbite/plugin'),
   ],
 }
